@@ -5,7 +5,7 @@
 [![Flask](https://img.shields.io/badge/Flask-2.0+-green.svg)](https://flask.palletsprojects.com/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-<div align="center">
+<div align="left">
   <img src="https://img.shields.io/badge/Accuracy-98%25-success"/>
   <img src="https://img.shields.io/badge/Status-Active-success"/>
 </div>
@@ -14,6 +14,7 @@
 
 A deep learning-based web application that classifies different types of waste materials using computer vision. The system helps in proper waste segregation by identifying whether an item belongs to categories like cardboard, glass, metal, paper, plastic, or trash.
 
+![Waste Management demo]()
 <div align="center">
   <h3>🎯 Categories</h3>
   <code>Cardboard</code> • <code>Glass</code> • <code>Metal</code> • <code>Paper</code> • <code>Plastic</code> • <code>Trash</code>
