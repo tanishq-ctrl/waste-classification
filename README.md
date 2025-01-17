@@ -87,6 +87,30 @@ waste_management/
     └── 📊 result.html       # Results page
 ```
 
+### 📸 Dataset Overview
+
+- **Total Images**: ![2527 Images](https://img.shields.io/badge/2527-Images-informational)
+- **Image Format**: ![JPG](https://img.shields.io/badge/Format-JPG-yellow)
+- **Resolution**: ![128x128](https://img.shields.io/badge/128×128-pixels-success)
+
+### 🗂️ Category Distribution
+
+```
+dataset-resized/
+├── 📦 cardboard/  │  403 images  │  ████████░░░░░░░░░░  │  15.7%
+├── 🔍 glass/      │  501 images  │  ██████████░░░░░░░░  │  19.5%
+├── ⚙️ metal/      │  410 images  │  ████████░░░░░░░░░░  │  15.9%
+├── 📄 paper/      │  594 images  │  ████████████░░░░░░  │  23.1%
+├── 🏷️ plastic/    │  482 images  │  █████████░░░░░░░░░  │  18.7%
+└── 🗑️ trash/      │  182 images  │  ███░░░░░░░░░░░░░░░  │   7.1%
+```
+
+### 💾 Getting the Dataset
+🔄 **From Kaggle**:
+   - Visit [TrashNet Dataset](https://www.kaggle.com/datasets/feyzazkefe/trashnet/data)
+   - Click 'Download' button
+   - Extract the downloaded archive
+
 ## 🚀 Setup and Installation
 
 1. Clone the repository:
