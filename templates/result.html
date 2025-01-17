@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classification Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-check-circle"></i> Classification Result</h1>
+        <div class="result-container">
+            <img src="{{ url_for('static', filename=image_path.split('/')[-2] + '/' + image_path.split('/')[-1]) }}" alt="Uploaded waste image">
+            <h2>Predicted Category: 
+                <span class="category">
+                    <i class="fas fa-tag"></i> 
+                    {{ category }}
+                </span>
+            </h2>
+        </div>
+        <a href="{{ url_for('home') }}" class="back-button">
+            <i class="fas fa-arrow-left"></i> Classify Another Image
+        </a>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,289 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 900px;
+    width: 92%;
+    margin: 2rem auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #1a237e;
+    margin-bottom: 2.5rem;
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: -0.5px;
+}
+
+h1 i {
+    color: #2196F3;
+    margin-right: 10px;
+    animation: spin 20s linear infinite;
+}
+
+.upload-container {
+    margin: 2.5rem 0;
+    text-align: center;
+    padding: 3rem;
+    border: 2px dashed #bbdefb;
+    border-radius: 15px;
+    transition: all 0.4s ease;
+    background: linear-gradient(145deg, #ffffff, #f5f5f5);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.upload-container:hover {
+    border-color: #2196F3;
+    background: linear-gradient(145deg, #f5f5f5, #ffffff);
+    transform: translateY(-2px);
+}
+
+.upload-container.drag-over {
+    border-color: #2196F3;
+    background: rgba(33, 150, 243, 0.05);
+    transform: translateY(-2px);
+}
+
+.upload-icon {
+    font-size: 4rem;
+    color: #2196F3;
+    margin-bottom: 1.5rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+label {
+    background: linear-gradient(45deg, #2196F3, #1976D2);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 30px;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+}
+
+label:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(33, 150, 243, 0.4);
+    background: linear-gradient(45deg, #1976D2, #2196F3);
+}
+
+button {
+    background: linear-gradient(45deg, #4CAF50, #43A047);
+    color: white;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 320px;
+    margin: 1.5rem auto;
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(76, 175, 80, 0.4);
+    background: linear-gradient(45deg, #43A047, #4CAF50);
+}
+
+.result-container {
+    text-align: center;
+    padding: 1.5rem;
+    background: linear-gradient(145deg, #ffffff, #f5f5f5);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.result-container img {
+    max-width: 100%;
+    max-height: 450px;
+    margin: 1.5rem 0;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.result-container img:hover {
+    transform: scale(1.02);
+}
+
+.category {
+    color: #1565C0;
+    font-weight: bold;
+    font-size: 1.3rem;
+    background: linear-gradient(120deg, #e3f2fd 0%, #bbdefb 100%);
+    padding: 10px 24px;
+    border-radius: 25px;
+    display: inline-block;
+    margin: 0.8rem 0;
+    box-shadow: 0 3px 10px rgba(33, 150, 243, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.back-button {
+    display: inline-block;
+    text-align: center;
+    margin-top: 2rem;
+    color: #2196F3;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 12px 24px;
+    border: 2px solid #2196F3;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: transparent;
+}
+
+.back-button:hover {
+    background: linear-gradient(45deg, #2196F3, #1976D2);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(33, 150, 243, 0.3);
+    border-color: transparent;
+}
+
+.error-message {
+    color: #d32f2f;
+    background: linear-gradient(120deg, #ffebee 0%, #ffcdd2 100%);
+    padding: 1.2rem;
+    border-radius: 12px;
+    margin: 1.2rem 0;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(244, 67, 54, 0.1);
+    border: 1px solid rgba(244, 67, 54, 0.2);
+}
+
+#file-name {
+    margin-top: 1.2rem;
+    padding: 8px 16px;
+    border-radius: 15px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+#file-name.file-selected {
+    background: rgba(33, 150, 243, 0.1);
+    box-shadow: 0 2px 8px rgba(33, 150, 243, 0.1);
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Add responsive design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 1.5rem;
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    .upload-container {
+        padding: 2rem 1rem;
+    }
+    
+    label, button {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+    }
+} 
+
+.drag-text {
+    color: #666;
+    margin: 1rem 0;
+    font-size: 1rem;
+}
+
+.file-selected {
+    color: #2196F3 !important;
+    font-weight: 600 !important;
+}
+
+/* Add this animation for drag over effect */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.drag-over {
+    animation: pulse 1.5s infinite;
+    border-color: #2196F3 !important;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(245, 245, 245, 0.95)) !important;
+}
+
+.drag-over .upload-icon {
+    color: #2196F3;
+    transform: scale(1.1);
+}
+
+.drag-over .drag-text {
+    color: #2196F3;
+    font-weight: 500;
+}
+
+/* Improve mobile responsiveness for drag and drop */
+@media (max-width: 768px) {
+    .drag-text {
+        font-size: 0.9rem;
+    }
+    
+    .upload-container {
+        padding: 2rem 1rem;
+    }
+    
+    #file-name {
+        font-size: 0.85rem;
+    }
+} 
