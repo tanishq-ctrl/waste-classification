@@ -14,7 +14,10 @@
 
 A deep learning-based web application that classifies different types of waste materials using computer vision. The system helps in proper waste segregation by identifying whether an item belongs to categories like cardboard, glass, metal, paper, plastic, or trash.
 
-![Waste Management demo]()
+<p align="center">
+  <img src="https://github.com/tanishq-ctrl/waste-classification/blob/main/static/WASTE-ezgif.com-video-to-gif-converter.gif" alt="Waste Management demo">
+</p>
+
 <div align="center">
   <h3>🎯 Categories</h3>
   <code>Cardboard</code> • <code>Glass</code> • <code>Metal</code> • <code>Paper</code> • <code>Plastic</code> • <code>Trash</code>
